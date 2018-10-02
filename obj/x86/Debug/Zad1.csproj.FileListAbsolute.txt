@@ -1,0 +1,10 @@
+C:\Users\ensody\source\repos\Zad1\Zad1\bin\x86\Debug\Zad1.exe.config
+C:\Users\ensody\source\repos\Zad1\Zad1\bin\x86\Debug\Zad1.exe
+C:\Users\ensody\source\repos\Zad1\Zad1\bin\x86\Debug\Zad1.pdb
+C:\Users\ensody\source\repos\Zad1\Zad1\obj\x86\Debug\Zad1.csprojAssemblyReference.cache
+C:\Users\ensody\source\repos\Zad1\Zad1\obj\x86\Debug\Zad1.Calc.resources
+C:\Users\ensody\source\repos\Zad1\Zad1\obj\x86\Debug\Zad1.Properties.Resources.resources
+C:\Users\ensody\source\repos\Zad1\Zad1\obj\x86\Debug\Zad1.csproj.GenerateResource.cache
+C:\Users\ensody\source\repos\Zad1\Zad1\obj\x86\Debug\Zad1.csproj.CoreCompileInputs.cache
+C:\Users\ensody\source\repos\Zad1\Zad1\obj\x86\Debug\Zad1.exe
+C:\Users\ensody\source\repos\Zad1\Zad1\obj\x86\Debug\Zad1.pdb
