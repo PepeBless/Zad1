@@ -17,117 +17,111 @@ namespace Zad1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button_one_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "1";
+            textBox_output.Text = textBox_output.Text + "1";
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void Button_two_Click(object sender, EventArgs e)
+        {
+            textBox_output.Text = textBox_output.Text + "2";
+        }
+
+        private void Button_three_Click(object sender, EventArgs e)
+        {
+            textBox_output.Text = textBox_output.Text + "3";
+        }
+
+        private void Button_four_Click(object sender, EventArgs e)
+        {
+            textBox_output.Text = textBox_output.Text + "4";
+        }
+
+        private void Button_five_Click(object sender, EventArgs e)
+        {
+            textBox_output.Text = textBox_output.Text + "5";
+        }
+
+        private void Button_six_Click(object sender, EventArgs e)
+        {
+            textBox_output.Text = textBox_output.Text + "6";
+        }
+
+        private void Button_seven_Click(object sender, EventArgs e)
+        {
+            textBox_output.Text = textBox_output.Text + "7";
+        }
+
+        private void Button_eight_Click(object sender, EventArgs e)
+        {
+            textBox_output.Text = textBox_output.Text + "8";
+        }
+
+        private void Button_nine_Click(object sender, EventArgs e)
+        {
+            textBox_output.Text = textBox_output.Text + "9";
+        }
+
+        private void Button_zero_Click(object sender, EventArgs e)
+        {
+            textBox_output.Text = textBox_output.Text + "0";
+        }
+
+        private void Button_y_Click(object sender, EventArgs e)
         {
 
         }
 
+        private void Button_x_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_plus_Click(object sender, EventArgs e)
+        {
+            textBox_output.Text = textBox_output.Text + "+";
+        }
+
+        private void Button_minus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_mult_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_div_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_pow_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_root_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_enter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_backspace_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox_output_TextChanged(object sender, EventArgs e)
+        {
+
+        }
         private void Calc_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button20_Click(object sender, EventArgs e)
         {
 
         }
