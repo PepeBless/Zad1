@@ -20,143 +20,61 @@ namespace Zad1
 
         private void Button_one_Click(object sender, EventArgs e)
         {
-            if (textBox_output_all.Text == "0" && textBox_output_all.Text != null)
-            {
-                textBox_output_all.Text = "1";
-            }
-            else
-            {
-                textBox_output_all.Text = textBox_output_all.Text + "1";
-            }
-
-            textBox_output.Text = "1";
-            znak = false;
+            Number_clock("1");
         }
 
         private void Button_two_Click(object sender, EventArgs e)
         {
-            if (textBox_output_all.Text == "0" && textBox_output_all.Text != null)
-            {
-                textBox_output_all.Text = "2";
-            }
-            else
-            {
-                textBox_output_all.Text = textBox_output_all.Text + "2";
-            }
-
-            textBox_output.Text = "2";
-            znak = false;
+            Number_clock("2");
         }
 
         private void Button_three_Click(object sender, EventArgs e)
         {
-            if (textBox_output_all.Text == "0" && textBox_output_all.Text != null)
-            {
-                textBox_output_all.Text = "3";
-            }
-            else
-            {
-                textBox_output_all.Text = textBox_output_all.Text + "3";
-            }
-
-            textBox_output.Text = "3";
-            znak = false;
+            Number_clock("3");
         }
 
         private void Button_four_Click(object sender, EventArgs e)
         {
-            if (textBox_output_all.Text == "0" && textBox_output_all.Text != null)
-            {
-                textBox_output_all.Text = "4";
-            }
-            else
-            {
-                textBox_output_all.Text = textBox_output_all.Text + "4";
-            }
-
-            textBox_output.Text = "4";
-            znak = false;
+            Number_clock("4");
         }
 
         private void Button_five_Click(object sender, EventArgs e)
         {
-            if (textBox_output_all.Text == "0" && textBox_output_all.Text != null)
-            {
-                textBox_output_all.Text = "5";
-            }
-            else
-            {
-                textBox_output_all.Text = textBox_output_all.Text + "5";
-            }
-
-            textBox_output.Text = "5";
-            znak = false;
+            Number_clock("5");
         }
 
         private void Button_six_Click(object sender, EventArgs e)
         {
-            if (textBox_output_all.Text == "0" && textBox_output_all.Text != null)
-            {
-                textBox_output_all.Text = "6";
-            }
-            else
-            {
-                textBox_output_all.Text = textBox_output_all.Text + "6";
-            }
-
-            textBox_output.Text = "6";
-            znak = false;
+            Number_clock("6");
         }
 
         private void Button_seven_Click(object sender, EventArgs e)
         {
-            if (textBox_output_all.Text == "0" && textBox_output_all.Text != null)
-            {
-                textBox_output_all.Text = "7";
-            }
-            else
-            {
-                textBox_output_all.Text = textBox_output_all.Text + "7";
-            }
-
-            textBox_output.Text = "7";
-            znak = false;
+            Number_clock("7");
         }
 
         private void Button_eight_Click(object sender, EventArgs e)
         {
-            if (textBox_output_all.Text == "0" && textBox_output_all.Text != null)
-            {
-                textBox_output_all.Text = "8";
-            }
-            else
-            {
-                textBox_output_all.Text = textBox_output_all.Text + "8";
-            }
-
-            textBox_output.Text = "8";
-            znak = false;
+            Number_clock("8");
         }
 
         private void Button_nine_Click(object sender, EventArgs e)
         {
+            Number_clock("9");
+        }
+
+        private void Number_clock(string s)
+        {
             if (textBox_output_all.Text == "0" && textBox_output_all.Text != null)
             {
-                textBox_output_all.Text = "9";
+                textBox_output_all.Text = s;
             }
             else
             {
-                textBox_output_all.Text = textBox_output_all.Text + "9";
+                textBox_output_all.Text = textBox_output_all.Text + s;
             }
 
-            textBox_output.Text = "9";
-            znak = false;
-        }
-
-        private void Button_zero_Click(object sender, EventArgs e)
-        {
-            textBox_output_all.Text = textBox_output_all.Text + "0";
-            textBox_output.Text = "0";
+            textBox_output.Text = s;
             znak = false;
         }
 
@@ -196,26 +114,41 @@ namespace Zad1
 
         private void Button_mult_Click(object sender, EventArgs e)
         {
-            textBox_output_all.Text = textBox_output_all.Text + "*";
-            textBox_output.Text = "*";
+            Znak_click("*");
         }
 
         private void Button_div_Click(object sender, EventArgs e)
         {
-            textBox_output_all.Text = textBox_output_all.Text + "/";
-            textBox_output.Text = "/";
+            Znak_click("/");
+        }
+
+        private void Pow_Root(string s)
+        {
+            textBox_output_all.Text = textBox_output_all.Text + s;
+            textBox_output.Text = s;
+            znak = false;
         }
 
         private void Button_pow_Click(object sender, EventArgs e)
         {
-            textBox_output_all.Text = textBox_output_all.Text + "^";
-            textBox_output.Text = "^";
+            Pow_Root("^");
         }
 
         private void Button_root_Click(object sender, EventArgs e)
         {
-            textBox_output_all.Text = textBox_output_all.Text + "√";
-            textBox_output.Text = "√";
+            Pow_Root("√");
+        }
+
+        private void Zero_Clear()
+        {
+            textBox_output_all.Text = textBox_output_all.Text + "0";
+            textBox_output.Text = "0";
+            znak = false;
+        }
+
+        private void Button_zero_Click(object sender, EventArgs e)
+        {
+            Zero_Clear();
         }
 
         private void Button_enter_Click(object sender, EventArgs e)
@@ -225,8 +158,7 @@ namespace Zad1
 
         private void Button_clear_Click(object sender, EventArgs e)
         {
-            textBox_output_all.Text = "0";
-            textBox_output.Text = "0";
+            Zero_Clear();
         }
 
         private void Button_plusmin_Click(object sender, EventArgs e)
