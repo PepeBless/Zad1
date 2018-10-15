@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox_output = new System.Windows.Forms.TextBox();
             this.button_one = new System.Windows.Forms.Button();
             this.button_two = new System.Windows.Forms.Button();
             this.button_six = new System.Windows.Forms.Button();
@@ -51,19 +50,9 @@
             this.textBox_output_all = new System.Windows.Forms.TextBox();
             this.button_dot = new System.Windows.Forms.Button();
             this.button_plusmin = new System.Windows.Forms.Button();
+            this.bracket_start = new System.Windows.Forms.Button();
+            this.bracket_end = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // textBox_output
-            // 
-            this.textBox_output.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_output.Location = new System.Drawing.Point(12, 56);
-            this.textBox_output.Name = "textBox_output";
-            this.textBox_output.ReadOnly = true;
-            this.textBox_output.Size = new System.Drawing.Size(43, 34);
-            this.textBox_output.TabIndex = 0;
-            this.textBox_output.Text = "0";
-            this.textBox_output.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox_output.Visible = false;
             // 
             // button_one
             // 
@@ -351,15 +340,42 @@
             this.button_plusmin.UseVisualStyleBackColor = false;
             this.button_plusmin.Click += new System.EventHandler(this.Button_plusmin_Click);
             // 
+            // bracket_start
+            // 
+            this.bracket_start.BackColor = System.Drawing.Color.Coral;
+            this.bracket_start.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bracket_start.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.bracket_start.Location = new System.Drawing.Point(37, 56);
+            this.bracket_start.Name = "bracket_start";
+            this.bracket_start.Size = new System.Drawing.Size(88, 49);
+            this.bracket_start.TabIndex = 32;
+            this.bracket_start.Text = "(";
+            this.bracket_start.UseVisualStyleBackColor = false;
+            this.bracket_start.Click += new System.EventHandler(this.bracket_start_Click);
+            // 
+            // bracket_end
+            // 
+            this.bracket_end.BackColor = System.Drawing.Color.Coral;
+            this.bracket_end.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bracket_end.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.bracket_end.Location = new System.Drawing.Point(225, 56);
+            this.bracket_end.Name = "bracket_end";
+            this.bracket_end.Size = new System.Drawing.Size(88, 49);
+            this.bracket_end.TabIndex = 33;
+            this.bracket_end.Text = ")";
+            this.bracket_end.UseVisualStyleBackColor = false;
+            this.bracket_end.Click += new System.EventHandler(this.bracket_end_Click);
+            // 
             // Calc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(19)))));
             this.ClientSize = new System.Drawing.Size(551, 361);
+            this.Controls.Add(this.bracket_end);
+            this.Controls.Add(this.bracket_start);
             this.Controls.Add(this.button_plusmin);
             this.Controls.Add(this.button_dot);
-            this.Controls.Add(this.textBox_output);
             this.Controls.Add(this.button_clear);
             this.Controls.Add(this.button_backspace);
             this.Controls.Add(this.button_enter);
@@ -393,8 +409,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox_output;
         private System.Windows.Forms.Button button_one;
         private System.Windows.Forms.Button button_two;
         private System.Windows.Forms.Button button_six;
@@ -417,6 +431,8 @@
         private System.Windows.Forms.TextBox textBox_output_all;
         private System.Windows.Forms.Button button_dot;
         private System.Windows.Forms.Button button_plusmin;
+        private System.Windows.Forms.Button bracket_start;
+        private System.Windows.Forms.Button bracket_end;
     }
 }
 
