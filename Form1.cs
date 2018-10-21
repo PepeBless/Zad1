@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Zad1
@@ -127,12 +122,12 @@ namespace Zad1
 
         private void Button_pow_Click(object sender, EventArgs e)
         {
-            Pow_Root("^");
+            Znak_click("^");
         }
 
         private void Button_root_Click(object sender, EventArgs e)
         {
-            Pow_Root("√");
+            Znak_click("√");
         }
 
         private void Zero_Clear()
@@ -143,7 +138,7 @@ namespace Zad1
 
         private void Button_zero_Click(object sender, EventArgs e)
         {
-            Zero_Clear();
+            Znak_click("0");
         }
 
         private String Calculate(String input)
@@ -210,46 +205,52 @@ namespace Zad1
             return output;
         }
 
-        static private String Counting(String input)
+        static private string Counting(string input)
         {
-            double result = 0;
-            Stack<double> temp = new Stack<double>();
-
-            for (int i = 0; i < input.Length; i++)
+            try
             {
+                double result = 0;
+                Stack<double> temp = new Stack<double>();
 
-                if (Char.IsDigit(input[i]))
-                {
-                    string a = string.Empty;
-
-                    while (!IsDelimeter(input[i]) && !IsOperator(input[i]))
-                    {
-                        a += input[i];
-                        i++;
-                        if (i == input.Length) break;
-                    }
-                    temp.Push(double.Parse(a));
-                    i--;
-                }
-                else if (IsOperator(input[i]))
+                for (int i = 0; i < input.Length; i++)
                 {
 
-                    double a = temp.Pop();
-                    double b = temp.Pop();
-
-                    switch (input[i])
+                    if (Char.IsDigit(input[i]))
                     {
-                        case '+': result = b + a; break;
-                        case '-': result = b - a; break;
-                        case '*': result = b * a; break;
-                        case '/': result = b / a; break;
-                        case '^': result = double.Parse(Math.Pow(double.Parse(b.ToString()), double.Parse(a.ToString())).ToString()); break;
-                        case '√': result = double.Parse(Math.Pow(double.Parse(a.ToString()), 1 / double.Parse(b.ToString())).ToString());  break;
+                        string a = string.Empty;
+
+                        while (!IsDelimeter(input[i]) && !IsOperator(input[i]))
+                        {
+                            a += input[i];
+                            i++;
+                            if (i == input.Length) break;
+                        }
+                        temp.Push(double.Parse(a));
+                        i--;
                     }
-                    temp.Push(result);
+                    else if (IsOperator(input[i]))
+                    {
+                        double a = temp.Pop();
+                        double b = temp.Pop();
+
+                        switch (input[i])
+                        {
+                            case '+': result = b + a; break;
+                            case '-': result = b - a; break;
+                            case '*': result = b * a; break;
+                            case '/': result = b / a; break;
+                            case '^': result = double.Parse(Math.Pow(double.Parse(b.ToString()), double.Parse(a.ToString())).ToString()); break;
+                            case '√': result = double.Parse(Math.Pow(double.Parse(a.ToString()), 1 / double.Parse(b.ToString())).ToString()); break;
+                        }
+                        temp.Push(result);
+                    }
                 }
+                return temp.Peek().ToString();
             }
-            return temp.Peek().ToString();
+            catch
+            {
+                return "Ошибка ввода";
+            }
         }
 
         static private bool IsDelimeter(char c)
@@ -294,7 +295,16 @@ namespace Zad1
 
         private void Button_plusmin_Click(object sender, EventArgs e)
         {
-            
+            if (textBox_output_all.Text.StartsWith("-"))
+            {
+                //It's negative now, so strip the `-` sign to make it positive
+                textBox_output_all.Text = textBox_output_all.Text.Substring(1);
+            }
+            else if (!string.IsNullOrEmpty(textBox_output_all.Text) && decimal.Parse(textBox_output_all.Text) != 0)
+            {
+                //It's positive now, so prefix the value with the `-` sign to make it negative
+                textBox_output_all.Text = "-" + textBox_output_all.Text;
+            }
         }
 
         private void Button_dot_Click(object sender, EventArgs e)
@@ -305,7 +315,6 @@ namespace Zad1
         private void Button_backspace_Click(object sender, EventArgs e)
         {
             textBox_output_all.Text = textBox_output_all.Text;
-
             int lenght = textBox_output_all.Text.Length - 1;
             string text = textBox_output_all.Text;
             textBox_output_all.Clear();
@@ -318,8 +327,13 @@ namespace Zad1
                 for (int i = 0; i < lenght; i++)
                 {
                     textBox_output_all.Text = textBox_output_all.Text + text[i];
+                    if (Char.IsDigit(text[lenght-1]))
+                        znak = true;
+                    else
+                        znak = false;
                 }
             }
+            znak = false;
         }
 
         private void TextBox_output_all_TextChanged(object sender, EventArgs e)
