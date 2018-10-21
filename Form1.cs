@@ -284,27 +284,12 @@ namespace Zad1
         }
 
         private void Button_enter_Click(object sender, EventArgs e)
-        {
-            textBox_output_all.Text = this.Calculate(textBox_output_all.Text);
+        {            textBox_output_all.Text = this.Calculate(textBox_output_all.Text);
         }
 
         private void Button_clear_Click(object sender, EventArgs e)
         {
             Zero_Clear();
-        }
-
-        private void Button_plusmin_Click(object sender, EventArgs e)
-        {
-            if (textBox_output_all.Text.StartsWith("-"))
-            {
-                //It's negative now, so strip the `-` sign to make it positive
-                textBox_output_all.Text = textBox_output_all.Text.Substring(1);
-            }
-            else if (!string.IsNullOrEmpty(textBox_output_all.Text) && decimal.Parse(textBox_output_all.Text) != 0)
-            {
-                //It's positive now, so prefix the value with the `-` sign to make it negative
-                textBox_output_all.Text = "-" + textBox_output_all.Text;
-            }
         }
 
         private void Button_dot_Click(object sender, EventArgs e)

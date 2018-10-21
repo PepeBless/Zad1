@@ -50,7 +50,6 @@
             this.button_clear = new System.Windows.Forms.Button();
             this.textBox_output_all = new System.Windows.Forms.TextBox();
             this.button_dot = new System.Windows.Forms.Button();
-            this.button_plusmin = new System.Windows.Forms.Button();
             this.bracket_start = new System.Windows.Forms.Button();
             this.bracket_end = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -328,19 +327,6 @@
             this.button_dot.UseVisualStyleBackColor = false;
             this.button_dot.Click += new System.EventHandler(this.Button_dot_Click);
             // 
-            // button_plusmin
-            // 
-            this.button_plusmin.BackColor = System.Drawing.Color.Coral;
-            this.button_plusmin.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_plusmin.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button_plusmin.Location = new System.Drawing.Point(225, 276);
-            this.button_plusmin.Name = "button_plusmin";
-            this.button_plusmin.Size = new System.Drawing.Size(88, 49);
-            this.button_plusmin.TabIndex = 31;
-            this.button_plusmin.Text = "+/-";
-            this.button_plusmin.UseVisualStyleBackColor = false;
-            this.button_plusmin.Click += new System.EventHandler(this.Button_plusmin_Click);
-            // 
             // bracket_start
             // 
             this.bracket_start.BackColor = System.Drawing.Color.Coral;
@@ -375,7 +361,6 @@
             this.ClientSize = new System.Drawing.Size(551, 361);
             this.Controls.Add(this.bracket_end);
             this.Controls.Add(this.bracket_start);
-            this.Controls.Add(this.button_plusmin);
             this.Controls.Add(this.button_dot);
             this.Controls.Add(this.button_clear);
             this.Controls.Add(this.button_backspace);
@@ -432,7 +417,6 @@
         private System.Windows.Forms.Button button_clear;
         private System.Windows.Forms.TextBox textBox_output_all;
         private System.Windows.Forms.Button button_dot;
-        private System.Windows.Forms.Button button_plusmin;
         private System.Windows.Forms.Button bracket_start;
         private System.Windows.Forms.Button bracket_end;
     }
