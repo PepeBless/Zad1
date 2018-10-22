@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Windows.Forms;
 
 namespace Zad1
@@ -15,50 +14,50 @@ namespace Zad1
 
         private void Button_one_Click(object sender, EventArgs e)
         {
-            Number_clock("1");
+            Number_click("1");
         }
 
         private void Button_two_Click(object sender, EventArgs e)
         {
-            Number_clock("2");
+            Number_click("2");
         }
 
         private void Button_three_Click(object sender, EventArgs e)
         {
-            Number_clock("3");
+            Number_click("3");
         }
 
         private void Button_four_Click(object sender, EventArgs e)
         {
-            Number_clock("4");
+            Number_click("4");
         }
 
         private void Button_five_Click(object sender, EventArgs e)
         {
-            Number_clock("5");
+            Number_click("5");
         }
 
         private void Button_six_Click(object sender, EventArgs e)
         {
-            Number_clock("6");
+            Number_click("6");
         }
 
         private void Button_seven_Click(object sender, EventArgs e)
         {
-            Number_clock("7");
+            Number_click("7");
         }
 
         private void Button_eight_Click(object sender, EventArgs e)
         {
-            Number_clock("8");
+            Number_click("8");
         }
 
         private void Button_nine_Click(object sender, EventArgs e)
         {
-            Number_clock("9");
+            Number_click("9");
         }
 
-        private void Number_clock(string s)
+        private void Number_click(string s)
         {
             if (textBox_output_all.Text == "0" && textBox_output_all.Text != null)
             {
@@ -138,7 +137,7 @@ namespace Zad1
 
         private void Button_zero_Click(object sender, EventArgs e)
         {
-            Znak_click("0");
+            Number_click("0");
         }
 
         private String Calculate(String input)
